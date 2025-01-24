@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+  <!-- <script>
     tailwind.config = {
       theme: {
         extend: {
@@ -21,11 +21,13 @@
         content-visibility: auto;
       }
     }
-  </style>
-
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-<!-- Option 1: Include in HTML -->
+  </style> -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </head>
 
@@ -70,8 +72,8 @@
     </div>
 
  <!-- ------------------------------------------main Section-----------------------------------------------------  -->
-  <div class="main md:mx-64 sm:mx-10 mx-10">
-    <div class="grid lg:grid-cols-2 gap-2 ">
+  <div class="main xl:mx-64 lg:mx-24 md:mx-20 sm:mx-10 mx-10 ">
+    <div class="grid xl:grid-cols-2 lg:grid-cols-2  gap-2 grid-cols-1">
       <div class="mt-60" >
         <p class="text-5xl text-gray-500 font-semibold mb-4">Elegant and creative solutions</p>
         <p class="text-gray-600 mb-8 text-xl">We are team of talented designer making websites with tailwindcss.</p>
@@ -81,7 +83,7 @@
         </div>  
       </div>
       <div class="mt-28">
-        <img src="Images/hero-img.png" alt="" class="w-auto md:w-11/12">
+        <img src="Images/hero-img.png" alt="" class="w-auto">
       </div>
     </div>
 
@@ -105,7 +107,7 @@
   </div>
 
 <!-- ----------------------------------------About Section----------------------------------------------------- -->
- <div class="about mt-24 md:mx-64 sm:mx-10 mx-10">
+ <div class="about mt-24 xl:mx-64 lg:mx-24 md:mx-20 sm:mx-10 mx-10 ">
     <div class="flex mb-10 flex-col text-center">
       <div class="grid grid-cols-1 place-items-center relative">
         <h1 class="text-slate-200 text-5xl font-semibold ">AbOUT US</h1>
@@ -115,7 +117,7 @@
       <p class="text-gray-900 mt-10">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur tempora saepe provident itaque praesentium eaque?</p>
     </div>
 
-    <div class="grid 2xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-5 my-20">
+    <div class="grid 2xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 gap-5 my-20">
       <div>
         <img src="Images/about.png" alt="" class="sm:w-full w-auto">
       </div>
@@ -153,7 +155,7 @@
   
  <!-- ------------------------------------------------Services Section----------------------------------------------------- -->
 <div class="bg-stone-100">
-    <div class="services lg:mx-64 md:mx-10 sm:mx-10 mx-10  mt-24 py-14">
+    <div class="services xl:mx-64 lg:mx-20 md:mx-14 sm:mx-10 mx-10   mt-24 py-14">
       <div class="flex mb-10 flex-col text-center">
         <div class="grid grid-cols-1 place-items-center relative">
           <h1 class="text-slate-200 text-5xl font-semibold ">SERVICES</h1>
@@ -199,7 +201,7 @@
 </div>
 
 <!-- --------------------------------------------Portfolio Section----------------------------------------------------- -->
- <div class="portfolio lg:mx-64 md:mx-10 sm:mx-10 mx-10  mt-12 py-14">
+ <div class="portfolio xl:mx-64 lg:mx-24 md:mx-14 sm:mx-10 mx-10  mt-12 py-14">
     <div class="flex text-center flex-col">
       <div><h1 class="text-slate-200 text-5xl font-semibold ">PORTFOLIO</h1></div>
       <div><p class="text-gray-700 text-3xl font-semibold -m-5 mb-5">PORTFOLIO</p></div>
@@ -232,64 +234,269 @@
 
  <!-- -----------------------------------------Testimonials--------------------------------------------------- -->
 <div class="bg-stone-100">
-  <div class="testimonial lg:mx-64 md:mx-10 sm:mx-10 mx-10  mt-12 py-14">
+  <div class="testimonial xl:mx-64 lg:mx-20 md:mx-14 sm:mx-10 mx-10  mt-12 py-14">
     <div class="flex text-center flex-col">
       <div><h1 class="text-slate-200 text-5xl font-semibold ">TESTIMONIALS</h1></div>
       <div><p class="text-gray-700 text-3xl font-semibold -m-5 mb-5">TESTIMONIALS</p></div>
       <p class="text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing Lorem, ipsum.</p>
     </div>
+
+        <!-- Swiper -->
+    <div class="swiper mySwiper mt-10 ">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide rounded-md sm:w-full">
+           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="fa-solid fa-quote-left"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote"></i></p>         
+           <div class="w-1/4 -mt-14 ms-5 ">
+              <img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100">
+              <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
+              <p class="text-sm text-gray-500">Stone Owner</p>
+           </div>
+        </div>
+        <div class="swiper-slide rounded-md sm:w-full">
+           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote"></i></p>         
+           <div class="w-1/4 -mt-14 ms-5 ">
+              <img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100">
+              <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
+              <p class="text-sm text-gray-500">Stone Owner</p>
+           </div>
+        </div>
+        <div class="swiper-slide rounded-md sm:w-full">
+           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote"></i></p>         
+           <div class="w-1/4 -mt-14 ms-5 ">
+              <img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100">
+              <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
+              <p class="text-sm text-gray-500">Stone Owner</p>
+           </div>
+        </div>
+        <div class="swiper-slide rounded-md sm:w-full">
+           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote"></i></p>         
+           <div class="w-1/4 -mt-14 ms-5 ">
+              <img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100">
+              <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
+              <p class="text-sm text-gray-500">Stone Owner</p>
+           </div>
+        </div>
+        <div class="swiper-slide rounded-md sm:w-full">
+           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote"></i></p>         
+           <div class="w-1/4 -mt-14 ms-5 ">
+              <img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100">
+              <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
+              <p class="text-sm text-gray-500">Stone Owner</p>
+           </div>
+        </div>
+        <div class="swiper-slide rounded-md sm:w-full">
+           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote"></i></p>         
+           <div class="w-1/4 -mt-14 ms-5 ">
+              <img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100">
+              <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
+              <p class="text-sm text-gray-500">Stone Owner</p>
+           </div>
+        </div>
+        <div class="swiper-slide rounded-md sm:w-full">
+           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote"></i></p>         
+           <div class="w-1/4 -mt-14 ms-5 ">
+              <img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100">
+              <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
+              <p class="text-sm text-gray-500">Stone Owner</p>
+           </div>
+        </div>
+        <div class="swiper-slide rounded-md sm:w-full">
+           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote"></i></p>         
+           <div class="w-1/4 -mt-14 ms-5 ">
+              <img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100">
+              <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
+              <p class="text-sm text-gray-500">Stone Owner</p>
+           </div>
+        </div>
+        <div class="swiper-slide rounded-md sm:w-full">
+           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote"></i></p>         
+           <div class="w-1/4 -mt-14 ms-5 ">
+              <img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100">
+              <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
+              <p class="text-sm text-gray-500">Stone Owner</p>
+           </div>
+        </div>
+      </div>
+      <div class="mt-24">
+        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+          <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span>
+          <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span>
+          <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span>
+          <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span>
+          <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span>
+          <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span>
+          <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 7"></span>
+        </div>
+      </div>
+      </div>
+      
+
   </div>
+  
+
 </div>
 
-<!-- Slider main container -->
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide">Slide 1</div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div>
+<!-- ----------------------------------------------Call to Action--------------------------------------------------- -->
+
+ <div class="action bg-green-600 text-white">
+  <div class="lg:mx-64 md:mx-10 sm:mx-10 mx-10 py-24">
+    <div class="flex flex-col text-center">
+        <div><h1 class="text-4xl font-semibold mb-5">Call To Action</h1></div>
+        <div><p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, rerum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur sapiente ipsam doloribus quas magni placeat quaerat culpa voluptatum quibusdam.</p></div>
+        <div> <button class="p-3 px-10 rounded-3xl border-2 border-white">Call To Action</button></div>
+    </div>  
     
+   </div>
+ </div>
+
+<!-- --------------------------------------------Team------------------------------------------------------- -->
+ <div class="team xl:mx-64 lg:mx-20 md:mx-14 sm:mx-10 mx-10   my-12 py-14 ">
+    <div class="flex text-center flex-col">
+      <div><h1 class="text-slate-200 text-5xl font-semibold ">TEAM MEMBERS</h1></div>
+      <div><p class="text-gray-700 text-3xl font-semibold -m-5 mb-5">TEAM</p></div>
+      <p class="text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing Lorem, ipsum.</p>
+    </div>
+
+    <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 mt-20 gap-10">
+      <div  class="mb-10">
+        <img src="Images/team-1.jpg" alt="">
+        <div class="mx-5 shadow-md p-3 bg-white relative -m-14 ">
+          <h4 class="text-gray-600 font-semibold">Walter White</h4>
+          <p class="text-gray-600 -mt-2">________</p>
+          <div class="flex justify-between mt-2 flex-row">
+            <div class="text-gray-500 italic me-24 text-sm">Chief Executive officer</div>
+            <div class="text-gray-400">
+              <a class="mx-0.5" href="https://x.com/?lang=en"><i class="bi bi-twitter"></i></a>
+              <a class="mx-0.5" href="https://www.facebook.com/facebook/"><i class="fa fa-facebook"></i></a>
+              <a class="mx-0.5" href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+              <a class="mx-0.5" href="https://in.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div  class="mb-10">
+        <img src="Images/team-2.jpg" alt="">
+        <div class="mx-5 shadow-md p-3 bg-white relative -m-14">
+          <h4 class="text-gray-600 font-semibold">Walter White</h4>
+          <p class="text-gray-600 -mt-2">________</p>
+          <div class="flex justify-between mt-2 flex-row">
+            <div class="text-gray-500 italic me-24 text-sm">Chief Executive officer</div>
+            <div class="text-gray-400">
+              <a class="mx-0.5" href="https://x.com/?lang=en"><i class="bi bi-twitter"></i></a>
+              <a class="mx-0.5" href="https://www.facebook.com/facebook/"><i class="fa fa-facebook"></i></a>
+              <a class="mx-0.5" href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+              <a class="mx-0.5" href="https://in.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-10">
+        <img src="Images/team-3.jpg" alt="">
+        <div class="mx-5 shadow-md p-3 bg-white relative -m-14">
+          <h4 class="text-gray-600 font-semibold">Walter White</h4>
+          <p class="text-gray-600 -mt-2">________</p>
+          <div class="flex justify-between mt-2 flex-row">
+            <div class="text-gray-500 italic me-24 text-sm">Chief Executive officer</div>
+            <div class="text-gray-400">
+              <a class="mx-0.5" href="https://x.com/?lang=en"><i class="bi bi-twitter"></i></a>
+              <a class="mx-0.5" href="https://www.facebook.com/facebook/"><i class="fa fa-facebook"></i></a>
+              <a class="mx-0.5" href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+              <a class="mx-0.5" href="https://in.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+
+<!-- ---------------------------------------------Contact Section----------------------------------------------------- -->
+<div class="contact lg:mx-64 md:mx-10 sm:mx-10 mx-10  my-24 py-14 ">
+  <div class="flex text-center flex-col">
+    <div><h1 class="text-slate-200 text-5xl font-semibold ">CONTACT US</h1></div>
+    <div><p class="text-gray-700 text-3xl font-semibold -m-5 mb-5">CONTACT</p></div>
+    <p class="text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing Lorem, Lorem, ipsum dolor. Lorem, ipsum dolor. ipsum.</p>
   </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
 
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+  <div class="grid 2xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 mt-20">
+    <div class="shadow-lg w-fit p-7">
+      <div>
+        <div class="flex mb-7">
+          <div> <i class="bi bi-geo-alt text-green-700 bg-green-50 rounded-full text-2xl p-2 me-5"></i></div>
+          <div>
+            <h2 class="text-xl font-semibold text-gray-500">Address</h2>
+            <p class="text-gray-800 text-sm">A108 Adam Street,New York,NY 535022</p>
+          </div> 
+        </div>
+        <div class="flex mb-7">
+          <div> <i class="bi bi-telephone text-green-700 bg-green-50 rounded-full text-2xl p-2 me-5"></i></div>
+          <div>
+            <h2 class="text-xl font-semibold text-gray-500">Call Us</h2>
+            <p class="text-gray-800 text-sm">+1 265374788378</p>
+          </div>  
+        </div>
+        <div class="flex mb-7">
+          <div><i class="bi bi-envelope text-green-700 bg-green-50 rounded-full text-2xl p-2 me-5"></i></div>
+          <div>
+            <h2 class="text-xl font-semibold text-gray-500">Email Us</h2>
+            <p class="text-gray-800 text-sm">info@example.com</p>
+          </div>
+        </div>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.72562453093!2d72.502089776176!3d23.033844379165846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85f7cfe7cbd5%3A0x47cbe14c9d9a3a3c!2sSanskar%20Technolab%20Pvt%20Ltd%20-%20Ahmedabad!5e0!3m2!1sen!2sin!4v1737626409815!5m2!1sen!2sin" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+    </div>
+    <div>
+    
+    <div class="shadow-md p-7 w-fit">
+       <div class="grid grid-cols-2 gap-3">
+         <div class="mb-5">
+           <label>Your Name</label><br>
+           <input type="text" class="border-2 border-gray-200 rounded-sm w-full mt-5 p-2">
+         </div>
+         <div class="mb-5">
+          <label >Your Email</label><br>
+          <input type="email" class="border-2 border-gray-200 rounded-sm w-full mt-5 p-2">
+         </div>
+       </div>
+       <div class="mb-5">
+         <label>subject</label><br>
+         <input type="text" class="border-2 border-gray-200 rounded-sm w-full mt-5 p-2">
+       </div>
+       <div class="mb-5">
+         <label>Message</label><br>
+         <textarea name="msg" id="" class="border-2 border-gray-200 rounded-sm w-full h-56 mt-5 p-2"></textarea>
+       </div>
+       <div class="flex justify-center"><button class="rounded-3xl p-2 px-6 text-white bg-green-500  ">Send Message</button></div>
+       
+    </div>
+    
 
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
 </div>
-</div>
+
+<!-- --------------------------------------------------newsletter------------------------------------------ -->
+ <div class="bg-stone-100 ">
+   <div class="newsletter py-10 flex flex-col text-center">
+      <div><h1 class="text-3xl text-gray-500 font-semibold">Join Our Newsletter</h1></div>
+      <div><p class="text-gray-800 text-sm my-10"> Voluptas architecto aperiam alias perferendis tenetur!</p></div>
+      <div><input type="text" class=" shadow-lg p-2 rounded-s-3xl w-1/4"> <button class="rounded-3xl p-2 px-6 text-white bg-green-500 -ms-7 ">Subscribe</button></div>
+   </div>
+ </div>
 
 
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-
-
+<!-- Initialize Swiper -->
 <script>
-  const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'vertical',
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 </script>
-
 </body>
 </html> 
