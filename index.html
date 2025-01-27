@@ -22,23 +22,40 @@
       }
     }
   </style> -->
+
+  <style>
+    .bi .bi-quote{
+        display: inline-block;
+        right: -5px;
+        position: relative;
+        transform: scale(-1, -1);
+    }
+  </style>
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
   <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 <!-- -------------------------------------------------------NavBar -------------------------------------------------------   -->
-  <div class="min-h-screen">
-    <div class="md:mx-52 mx-10">
-      <nav class="bg-white md:flex md:items-center md:justify-between px-10 py-4">
+  <!-- <div class="min-h-screen">
+    <div class="md:mx-64 mx-10">
+      <nav class="flex  bg-white md:flex md:items-center md:justify-between px-10 py-4">
         
         <h2 class="text-slate-600 text-3xl font-bold">eNno</h2>
-        <ul class="md:flex md:items-center space-x-7">
+        <div class="xl:static  md:static  absolute bg-white md:min-h-fit xl:min-h-fit min-h-[60vh] left-0 top-[9%]  w-full md:w-auto xl:w-auto flex items-center px-5">
+          <ul class="flex xl:flex-row lg:flex-row md:flex-row flex-col md:items-center space-x-7 ml-96">
             <li class="text-sm text-green-600"><a href="#">Home</a></li>
             <li class="text-sm text-gray-600 hover:text-green-600"><a href="#">About</a></li>
             <li class="text-sm text-gray-600 hover:text-green-600"><a href="#">Services</a></li>
@@ -56,21 +73,57 @@
               </button>
             </li>
             <li class="text-sm text-gray-600 hover:text-green-600 "><a href="#">Contact</a></li>
-            <button class="bg-green-500 rounded-3xl px-5 py-1 text-white">Get Started</button>
-        </ul>
-
-        <div class="sm:hidden" id="mobile-menu">
-          <div class="space-y-1 px-2 pb-3 pt-2">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
-          </div>
+            
+          </ul>
         </div>
-    </nav>
-    </div>
+        <button class="bg-green-500 rounded-3xl px-5 py-1 text-white">Get Started</button>
 
+        
+    </nav>
+    </div> -->
+
+
+    <header class="bg-white">
+      <nav class="flex justify-between items-center w-[73%]  mx-auto mt-5">
+          <div>
+            <h2 class="text-slate-600 text-3xl font-bold">eNno</h2>
+          </div>
+          <div
+              class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+              <ul class="flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-5 xl:ms-96">
+                <li class="text-md text-green-600"><a href="#">Home</a></li>
+                <li class="text-md text-gray-600 hover:text-green-600"><a href="#">About</a></li>
+                <li class="text-md text-gray-600 hover:text-green-600"><a href="#">Services</a></li>
+                <li class="text-md text-gray-600 hover:text-green-600"><a href="#">Portfolio</a></li>
+                <li class="text-md text-gray-600 hover:text-green-600"><a href="#">Team</a></li>
+                <li class="text-md text-gray-600 hover:text-green-600">
+                   <button class="group relative">
+                    Dropdown <i class="bi bi-chevron-down"></i>
+                    <div class="absolute top-full right-0 scale-y-0 group-hover:scale-y-100 origin-right duration-200 p-3 shadow-md w-32 bg-white">
+                      <a class="mb-10">Dropdown 1</a>
+                      <a class="mb-10">Dropdown 2</a>
+                      <a class="mb-10">Dropdown 2</a>
+                      <a class="mb-10">Dropdown 2</a>
+                    </div>
+                  </button>
+                </li>
+                <li class="text-md text-gray-600 hover:text-green-600 "><a href="#">Contact</a></li>
+              </ul>
+          </div>
+          <div class="flex items-center gap-6">
+            <button class="bg-green-500 rounded-3xl px-5 py-1 text-white">Get Started</button>
+              <i onclick="onToggleMenu(this)" name="menu" class="bi bi-list text-3xl cursor-pointer md:hidden"></i>
+              <!-- <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon> -->
+          </div>
+  </header>
+
+  <script>
+    const navLinks = document.querySelector('.nav-links')
+    function onToggleMenu(e){
+        e.name = e.name === 'menu' ? 'close' : 'menu'
+        navLinks.classList.toggle('top-[7%]')
+    }
+</script>
  <!-- ------------------------------------------main Section-----------------------------------------------------  -->
   <div class="main xl:mx-64 lg:mx-24 md:mx-20 sm:mx-10 mx-10 ">
     <div class="grid xl:grid-cols-2 lg:grid-cols-2  gap-2 grid-cols-1">
@@ -155,7 +208,7 @@
   
  <!-- ------------------------------------------------Services Section----------------------------------------------------- -->
 <div class="bg-stone-100">
-    <div class="services xl:mx-64 lg:mx-20 md:mx-14 sm:mx-10 mx-10   mt-24 py-14">
+    <div class="services 2xl:mx-64 xl:mx-44  lg:mx-20 md:mx-14 sm:mx-10 mx-10   mt-24 py-14">
       <div class="flex mb-10 flex-col text-center">
         <div class="grid grid-cols-1 place-items-center relative">
           <h1 class="text-slate-200 text-5xl font-semibold ">SERVICES</h1>
@@ -201,7 +254,7 @@
 </div>
 
 <!-- --------------------------------------------Portfolio Section----------------------------------------------------- -->
- <div class="portfolio xl:mx-64 lg:mx-24 md:mx-14 sm:mx-10 mx-10  mt-12 py-14">
+ <div class="portfolio 2xl:mx-64 xl:mx-44 lg:mx-24 md:mx-14 sm:mx-10 mx-10  mt-12 py-14">
     <div class="flex text-center flex-col">
       <div><h1 class="text-slate-200 text-5xl font-semibold ">PORTFOLIO</h1></div>
       <div><p class="text-gray-700 text-3xl font-semibold -m-5 mb-5">PORTFOLIO</p></div>
@@ -217,7 +270,9 @@
     </div>
 
     <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 mt-5 gap-9">
-      <div><img src="Images/app-1.jpg" alt=""></div>
+      <div>
+         <img src="Images/app-1.jpg" alt="">
+      </div>
       <div><img src="Images/product-1.jpg" alt=""></div>
       <div><img src="Images/branding-1.jpg" alt=""></div>
       <div><img src="Images/books-1.jpg" alt=""></div>
@@ -234,7 +289,7 @@
 
  <!-- -----------------------------------------Testimonials--------------------------------------------------- -->
 <div class="bg-stone-100">
-  <div class="testimonial xl:mx-64 lg:mx-20 md:mx-14 sm:mx-10 mx-10  mt-12 py-14">
+  <div class="testimonial 2xl:mx-64 xl:mx-44 lg:mx-20 md:mx-14 sm:mx-10 mx-10  mt-12 py-14">
     <div class="flex text-center flex-col">
       <div><h1 class="text-slate-200 text-5xl font-semibold ">TESTIMONIALS</h1></div>
       <div><p class="text-gray-700 text-3xl font-semibold -m-5 mb-5">TESTIMONIALS</p></div>
@@ -245,7 +300,7 @@
     <div class="swiper mySwiper mt-10 ">
       <div class="swiper-wrapper">
         <div class="swiper-slide rounded-md sm:w-full">
-           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="fa-solid fa-quote-left"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote"></i></p>         
+           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote  text-2xl text-green-500"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote text-2xl text-green-500  origin-center transform rotate-45 "></i></p>         
            <div class="w-1/4 -mt-14 ms-5 ">
               <img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100">
               <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
@@ -253,7 +308,39 @@
            </div>
         </div>
         <div class="swiper-slide rounded-md sm:w-full">
-           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote"></i></p>         
+           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote text-2xl text-green-500"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote text-2xl text-green-500 transform rotate-180"></i></p>         
+           <div class="w-1/4 -mt-14 ms-5 ">
+              <img src="Images/testimonials-2.jpg" class="rounded-full border-4 border-stone-100">
+              <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
+              <p class="text-sm text-gray-500">Stone Owner</p>
+           </div>
+        </div>
+        <div class="swiper-slide rounded-md sm:w-full">
+           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote text-2xl text-green-500"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote text-2xl text-green-500 transform rotate-180"></i></p>         
+           <div class="w-1/4 -mt-14 ms-5 ">
+              <img src="Images/testimonials-3.jpg" class="rounded-full border-4 border-stone-100">
+              <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
+              <p class="text-sm text-gray-500">Stone Owner</p>
+           </div>
+        </div>
+        <div class="swiper-slide rounded-md sm:w-full">
+           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote text-2xl text-green-500"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote text-2xl text-green-500 transform rotate-180"></i></p>         
+           <div class="w-1/4 -mt-14 ms-5 ">
+              <img src="Images/testimonials-4.jpg" class="rounded-full border-4 border-stone-100">
+              <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
+              <p class="text-sm text-gray-500">Stone Owner</p>
+           </div>
+        </div>
+        <div class="swiper-slide rounded-md sm:w-full">
+           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote text-2xl text-green-500"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote text-2xl text-green-500 transform rotate-180"></i></p>         
+           <div class="w-1/4 -mt-14 ms-5 ">
+              <img src="Images/testimonials-5.jpg" class="rounded-full border-4 border-stone-100">
+              <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
+              <p class="text-sm text-gray-500">Stone Owner</p>
+           </div>
+        </div>
+        <div class="swiper-slide rounded-md sm:w-full">
+           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote text-2xl text-green-500"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote text-2xl text-green-500 transform rotate-180"></i></p>         
            <div class="w-1/4 -mt-14 ms-5 ">
               <img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100">
               <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
@@ -261,57 +348,25 @@
            </div>
         </div>
         <div class="swiper-slide rounded-md sm:w-full">
-           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote"></i></p>         
+           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote text-2xl text-green-500"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote text-2xl text-green-500 transform rotate-180"></i></p>         
            <div class="w-1/4 -mt-14 ms-5 ">
-              <img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100">
+              <img src="Images/testimonials-2.jpg" class="rounded-full border-4 border-stone-100">
               <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
               <p class="text-sm text-gray-500">Stone Owner</p>
            </div>
         </div>
         <div class="swiper-slide rounded-md sm:w-full">
-           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote"></i></p>         
+           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote text-2xl text-green-500"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote text-2xl text-green-500 transform rotate-180"></i></p>         
            <div class="w-1/4 -mt-14 ms-5 ">
-              <img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100">
+              <img src="Images/testimonials-3.jpg" class="rounded-full border-4 border-stone-100">
               <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
               <p class="text-sm text-gray-500">Stone Owner</p>
            </div>
         </div>
         <div class="swiper-slide rounded-md sm:w-full">
-           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote"></i></p>         
+           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote text-2xl text-green-500"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote text-2xl text-green-500 transform rotate-180"></i></p>         
            <div class="w-1/4 -mt-14 ms-5 ">
-              <img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100">
-              <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
-              <p class="text-sm text-gray-500">Stone Owner</p>
-           </div>
-        </div>
-        <div class="swiper-slide rounded-md sm:w-full">
-           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote"></i></p>         
-           <div class="w-1/4 -mt-14 ms-5 ">
-              <img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100">
-              <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
-              <p class="text-sm text-gray-500">Stone Owner</p>
-           </div>
-        </div>
-        <div class="swiper-slide rounded-md sm:w-full">
-           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote"></i></p>         
-           <div class="w-1/4 -mt-14 ms-5 ">
-              <img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100">
-              <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
-              <p class="text-sm text-gray-500">Stone Owner</p>
-           </div>
-        </div>
-        <div class="swiper-slide rounded-md sm:w-full">
-           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote"></i></p>         
-           <div class="w-1/4 -mt-14 ms-5 ">
-              <img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100">
-              <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
-              <p class="text-sm text-gray-500">Stone Owner</p>
-           </div>
-        </div>
-        <div class="swiper-slide rounded-md sm:w-full">
-           <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote"></i></p>         
-           <div class="w-1/4 -mt-14 ms-5 ">
-              <img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100">
+              <img src="Images/testimonials-4.jpg" class="rounded-full border-4 border-stone-100">
               <h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3>
               <p class="text-sm text-gray-500">Stone Owner</p>
            </div>
@@ -350,7 +405,7 @@
  </div>
 
 <!-- --------------------------------------------Team------------------------------------------------------- -->
- <div class="team xl:mx-64 lg:mx-20 md:mx-14 sm:mx-10 mx-10   my-12 py-14 ">
+ <div class="team 2xl:mx-64 xl:mx-44 lg:mx-20 md:mx-14 sm:mx-10 mx-10   my-12 py-14 ">
     <div class="flex text-center flex-col">
       <div><h1 class="text-slate-200 text-5xl font-semibold ">TEAM MEMBERS</h1></div>
       <div><p class="text-gray-700 text-3xl font-semibold -m-5 mb-5">TEAM</p></div>
@@ -410,15 +465,15 @@
  </div>
 
 <!-- ---------------------------------------------Contact Section----------------------------------------------------- -->
-<div class="contact lg:mx-64 md:mx-10 sm:mx-10 mx-10  my-24 py-14 ">
+<div class="contact xl:mx-64 lg:mx-24 md:mx-10 sm:mx-10 mx-10  my-24 py-14 ">
   <div class="flex text-center flex-col">
     <div><h1 class="text-slate-200 text-5xl font-semibold ">CONTACT US</h1></div>
     <div><p class="text-gray-700 text-3xl font-semibold -m-5 mb-5">CONTACT</p></div>
     <p class="text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing Lorem, Lorem, ipsum dolor. Lorem, ipsum dolor. ipsum.</p>
   </div>
 
-  <div class="grid 2xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 mt-20">
-    <div class="shadow-lg w-fit p-7">
+  <div class="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 mt-20 gap-y-10">
+    <div class="shadow-lg xl:w-10/12 p-7 ">
       <div>
         <div class="flex mb-7">
           <div> <i class="bi bi-geo-alt text-green-700 bg-green-50 rounded-full text-2xl p-2 me-5"></i></div>
@@ -442,27 +497,27 @@
           </div>
         </div>
       </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.72562453093!2d72.502089776176!3d23.033844379165846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85f7cfe7cbd5%3A0x47cbe14c9d9a3a3c!2sSanskar%20Technolab%20Pvt%20Ltd%20-%20Ahmedabad!5e0!3m2!1sen!2sin!4v1737626409815!5m2!1sen!2sin" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+      <iframe class="w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.72562453093!2d72.502089776176!3d23.033844379165846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85f7cfe7cbd5%3A0x47cbe14c9d9a3a3c!2sSanskar%20Technolab%20Pvt%20Ltd%20-%20Ahmedabad!5e0!3m2!1sen!2sin!4v1737626409815!5m2!1sen!2sin" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
     </div>
     <div>
     
-    <div class="shadow-md p-7 w-fit">
+    <div class="shadow-md p-7 xl:-ml-14 ">
        <div class="grid grid-cols-2 gap-3">
          <div class="mb-5">
-           <label>Your Name</label><br>
+           <label class="text-gray-600">Your Name</label><br>
            <input type="text" class="border-2 border-gray-200 rounded-sm w-full mt-5 p-2">
          </div>
          <div class="mb-5">
-          <label >Your Email</label><br>
+          <label  class="text-gray-600">Your Email</label><br>
           <input type="email" class="border-2 border-gray-200 rounded-sm w-full mt-5 p-2">
          </div>
        </div>
        <div class="mb-5">
-         <label>subject</label><br>
+         <label class="text-gray-600">Subject</label><br>
          <input type="text" class="border-2 border-gray-200 rounded-sm w-full mt-5 p-2">
        </div>
        <div class="mb-5">
-         <label>Message</label><br>
+         <label class="text-gray-600">Message</label><br>
          <textarea name="msg" id="" class="border-2 border-gray-200 rounded-sm w-full h-56 mt-5 p-2"></textarea>
        </div>
        <div class="flex justify-center"><button class="rounded-3xl p-2 px-6 text-white bg-green-500  ">Send Message</button></div>
@@ -479,9 +534,68 @@
    <div class="newsletter py-10 flex flex-col text-center">
       <div><h1 class="text-3xl text-gray-500 font-semibold">Join Our Newsletter</h1></div>
       <div><p class="text-gray-800 text-sm my-10"> Voluptas architecto aperiam alias perferendis tenetur!</p></div>
-      <div><input type="text" class=" shadow-lg p-2 rounded-s-3xl w-1/4"> <button class="rounded-3xl p-2 px-6 text-white bg-green-500 -ms-7 ">Subscribe</button></div>
+      <div><input type="text" class=" shadow-lg p-2 rounded-s-3xl sm:w-6/12 xl:w-1/4 w-1/4 "> <button class="rounded-3xl p-2 px-6 text-white bg-green-500 -ms-7 ">Subscribe</button></div>
    </div>
  </div>
+
+<!-- -------------------------------------------------------Contact Us Section----------------------------------------------------- -->
+
+<div class="footer xl:mx-64 lg:mx-20 md:mx-14 sm:mx-10 mx-10 my-12">
+   <div class="grid xl:grid-cols-4 lg:grid-cols-4 gap-5">
+      <div>
+         <h1 class="text-gray-500 text-3xl font-semibold mb-4">eNno</h1>
+         <p class="text-md text-gray-500 mb-1">A108 Adam street</p>
+         <p class="text-md text-gray-500 mb-4">New York,NY 535022</p>
+         <p class="text-md text-gray-500 mb-1"><span class="text-gray-600 font-medium">Phone :</span> +1 556565765786</p>
+         <p class="text-md text-gray-500 "><span class="text-gray-600 font-medium">Email :</span> info@example.com</p>
+      </div>
+      <div class="xl:ms-16">
+          <p class="text-gray-500 text-xl font-semibold mb-3">Useful Links</p>
+          <ul>
+            <li class="mb-4"><i class="bi bi-chevron-right text-green-500 me-1"></i><a href="#" class="text-md text-gray-500">Home</a></li>
+            <li class="mb-4"><i class="bi bi-chevron-right text-green-500 me-1"></i><a href="#" class="text-md text-gray-500">About us</a></li>
+            <li class="mb-4"><i class="bi bi-chevron-right text-green-500 me-1"></i><a href="#" class="text-md text-gray-500">Services</a></li>
+            <li class="mb-4"><i class="bi bi-chevron-right text-green-500 me-1"></i><a href="#" class="text-md text-gray-500">Terms of service</a></li>
+          </ul>
+      </div>
+      <div class="xl:-ms-10">
+        <p class="text-gray-500 text-xl font-semibold mb-3">Our Services</p>
+        <ul>
+          <li class="mb-4"><i class="bi bi-chevron-right text-green-500 me-1"></i><a href="#" class="text-md text-gray-500">Web design</a></li>
+          <li class="mb-4"><i class="bi bi-chevron-right text-green-500 me-1"></i><a href="#" class="text-md text-gray-500">web Devlopment</a></li>
+          <li class="mb-4"><i class="bi bi-chevron-right text-green-500 me-1"></i><a href="#" class="text-md text-gray-500">Product Manegement</a></li>
+          <li class="mb-4"><i class="bi bi-chevron-right text-green-500 me-1"></i><a href="#" class="text-md text-gray-500">Marketing</a></li>
+        </ul>
+    </div>
+    <div class="xl:-ms-20">
+      <p class="text-gray-500 text-xl font-semibold mb-3">Follow Us</p>
+      <p class="text-md text-gray-500 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <ul class="flex flex-row">
+        <li>
+          <a href="https://x.com/?lang=en"><i class="fa fa-twitter text-md text-gray-500 p-2 border-2 border-gray-500 rounded-full"></i></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/facebook/"><i class="bi bi-facebook text-md text-gray-500 p-2 border-2 border-gray-500 rounded-full"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" ><i class="fa fa-instagram text-md text-gray-500 p-2 border-2 border-gray-500 rounded-full"></i></a>
+        </li>
+        <li>
+          <a href="https://in.linkedin.com/"><i class="fa fa-linkedin text-md text-gray-500 p-2 border-2 border-gray-500 rounded-full"></i></a>
+
+      </ul>
+    </div>
+   </div>
+   <hr class="my-10">
+
+   <div class="text-gray-800 text-center">
+     <p>@ Copyright <span class="text-gray-700 font-semibold">eNno</span> All Rights Reserved</p>
+     <p>Designed by <span class="text-green-500">BootstrapMade</span> Distributed by <span class="text-green-500">ThemeWagon</span></p>
+   </div>
+   <div class="start-96 fixed"><i class="bi bi-arrow-up-circle-fill text-green-500 text-4xl"></i></div>
+</div>
+
+
 
 
 <!-- Swiper JS -->
@@ -490,12 +604,27 @@
 <!-- Initialize Swiper -->
 <script>
   var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
+    slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1520: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        }
+      },
   });
 </script>
 </body>
