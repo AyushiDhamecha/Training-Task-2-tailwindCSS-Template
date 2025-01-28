@@ -89,7 +89,7 @@
     </div> -->
 
     
-  <header class="bg-white xl:fixed xl:w-full xl:top-0 z-10">
+  <header class="bg-white xl:fixed xl:w-full xl:top-0 z-10 shadow-lg">
       <nav class="flex justify-between items-center w-[73%]  mx-auto mt-5 mb-3">
           <div>
             <h2 class="text-slate-600 text-3xl font-bold">eNno</h2>
@@ -102,16 +102,53 @@
                 <li class="text-md text-gray-600 hover:text-green-600"><a href="#Services">Services</a></li>
                 <li class="text-md text-gray-600 hover:text-green-600"><a href="#Portfolio">Portfolio</a></li>
                 <li class="text-md text-gray-600 hover:text-green-600"><a href="#Team">Team</a></li>
-                <li class="text-md text-gray-600 hover:text-green-600">
+                <!-- <li class="text-md text-gray-600 hover:text-green-600">
                    <button class="group relative">
                     Dropdown <i class="bi bi-chevron-down"></i>
                     <div class="absolute top-full right-0 scale-y-0 group-hover:scale-y-100 origin-right duration-200 p-3 shadow-md w-32 bg-white">
-                      <a class="mb-10">Dropdown 1</a>
-                      <a class="mb-10">Dropdown 2</a>
-                      <a class="mb-10">Dropdown 2</a>
-                      <a class="mb-10">Dropdown 2</a>
+                      <ul>
+                        <li><a class="mb-10">Dropdown 1</a></li>
+                        <li><a class="mb-10">Dropdown 2</a></li>
+                        <li><a class="mb-10">Dropdown 2</a></li>
+                        <li><a class="mb-10">Dropdown 2</a></li>
+                      </ul>
                     </div>
                   </button>
+                </li> -->
+                <li class="relative group">
+                  <a href="#" class="flex items-center text-gray-600 hover:text-green-500 transition">
+                    Dropdown
+                    <svg class="ml-1 w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </a>
+                  <ul
+                    class="absolute left-0 mt-2 bg-white border border-gray-300 rounded shadow-lg w-48 hidden group-hover:block group-focus-within:block">
+                    <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Dropdown 1</a></li>
+        
+                    <li class="relative">
+                      <a href="#" class="flex items-center block px-4 py-2 text-gray-600 hover:bg-gray-100 peer">
+                        Deep Dropdown
+                        <svg class="ml-1 w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </a>
+                      <ul
+                        class="absolute right-full top-0 mt-0 bg-white border border-gray-300 rounded shadow-lg w-48 hidden peer-hover:block peer-focus:block">
+                        <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Deep Dropdown 1</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Deep Dropdown 2</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Deep Dropdown 3</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Deep Dropdown 4</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Deep Dropdown 5</a></li>
+                      </ul>
+                    </li>
+        
+                    <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Dropdown 2</a></li>
+                    <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Dropdown 3</a></li>
+                    <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Dropdown 4</a></li>
+                  </ul>
                 </li>
                 <li class="text-md text-gray-600 hover:text-green-600 "><a href="#Contact">Contact</a></li>
               </ul>
@@ -148,15 +185,15 @@
     </div>
 
     <div class="grid md:grid-cols-3 gap-5 mt-16 mb-14 sm:grid-cols-1">
-      <div class="transition hover:-mt-7 duration-1000">
+      <div class="transition-all hover:-mt-7 duration-500">
         <div class="bg-stone-100 p-5 py-12 sm:w-full group" data-aos="fade-up" data-aos-duration="700">
           <i class="bi bi-bounding-box-circles text-4xl text-green-500 "></i>
-          <h1 class="text-2xl text-gray-600 mt-5 font-semibold transition group-hover:text-green-500 duration-500">Lorem, ipsum.</h1>
+          <h1 class="text-2xl text-gray-600 mt-5 font-semibold transition-all group-hover:text-green-500 duration-500">Lorem, ipsum.</h1>
           <p class="text-sm text-gray-800 mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, voluptates.</p>
         </div>
       </div>
       
-      <div class="transition hover:-mt-7 duration-1000">
+      <div class="transition-all hover:-mt-7 duration-500">
         <div class="bg-stone-100 p-5 py-12 sm:w-full group" data-aos="fade-up" data-aos-duration="900">
           <i class="bi bi-broadcast text-4xl text-green-500 "></i>
           <h1 class="text-2xl text-gray-600 mt-5 font-semibold group-hover:text-green-500">Lorem, ipsum.</h1>
@@ -164,7 +201,7 @@
         </div>
       </div>
      
-      <div class="transition hover:-mt-7 duration-1000">
+      <div class="transition-all hover:-mt-7 duration-500">
         <div class="bg-stone-100 p-5 py-12 sm:w-full group" data-aos="fade-up" data-aos-duration="1100">
           <i class="bi bi-easel text-4xl text-green-500 "></i>
           <h1 class="text-2xl text-gray-600 mt-5 font-semibold group-hover:text-green-500">Lorem, ipsum.</h1>
@@ -187,9 +224,15 @@
     </div>
 
     <div class="grid 2xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 gap-5 my-20" data-aos="fade-up" data-aos-duration="1500">
-      <div class="relative">
+      <div class="relative ">
         <img src="Images/about.png" alt="" class="sm:w-full w-auto ">
-        <div class="absolute top-1/2 start-1/2"><i class="bi bi-caret-right-fill text-4xl p-5 bg-green-500 rounded-full text-white "></i></div>
+        <div class="absolute top-1/2 start-72">
+          <span class="relative flex h-16 w-16">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-16 w-16  "><i class="bi bi-caret-right-fill text-4xl p-3 bg-green-500 rounded-full text-white "></i></span>
+
+          </span>
+        </div>
         
       </div>
       <div data-aos="fade-up">
@@ -240,8 +283,9 @@
         <p class="text-gray-900 mt-10">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur tempora saepe provident itaque praesentium eaque?</p>
       </div>
 
-      <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 g-6">
-        <div class="bg-white rounded-md py-20 px-5 border-stone-200 border-2 hover:border-green-500 text-center m-3 group" data-aos="fade-up" data-aos-duration="500">
+      <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 g-6 ">
+        
+        <div class="bg-white rounded-md py-20 px-5 border-stone-200 border-2  text-center m-3 group  duration-500  hover:border-green-500" data-aos="fade-up" data-aos-duration="500">
           <div><i class="bi bi-bar-chart-fill text-2xl text-white bg-green-500 rounded-sm p-4 "></i></div> 
           <p class="text-2xl text-gray-500 my-5 font-semibold group-hover:text-green-500">Lorem, ipsum.</p>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, fuga aliquid quos impedit reiciendis sit?</p>
@@ -294,7 +338,7 @@
     <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 mt-5 gap-9" data-aos="fade-up" data-aos-duration="1000">
       <div class="relative group ">
          <img src="Images/app-1.jpg" alt="">
-         <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-[90%] start-6 bottom-5 py-3">
+         <div class="absolute bg-white  object-cover opacity-0 transition-opacity ease-in-out duration-300 group-hover:opacity-75 w-[90%] start-6 bottom-5 py-3 " >
             <div class="grid grid-cols-5 p-2">
                 <div class="col-span-4">
                   <h1 class="text-gray-600 text-lg font-semibold">App 1</h1>
@@ -309,7 +353,7 @@
       </div>
       <div class="relative group">
            <img src="Images/product-1.jpg" alt="">
-            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-[90%] start-6 bottom-5 py-3">
+            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-75 w-[90%] start-6 bottom-5 py-3">
             <div class="grid grid-cols-5 p-2">
                 <div class="col-span-4">
                   <h1 class="text-gray-600 text-lg font-semibold">App 1</h1>
@@ -324,7 +368,7 @@
       </div>
       <div class="relative group">
            <img src="Images/branding-1.jpg" alt="">
-            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-[90%] start-6 bottom-5 py-3">
+            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-75 w-[90%] start-6 bottom-5 py-3">
             <div class="grid grid-cols-5 p-2">
                 <div class="col-span-4">
                   <h1 class="text-gray-600 text-lg font-semibold">App 1</h1>
@@ -339,7 +383,7 @@
       </div>
       <div class="relative group">
            <img src="Images/books-1.jpg" alt="">
-            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-[90%] start-6 bottom-5 py-3">
+            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-75 w-[90%] start-6 bottom-5 py-3">
             <div class="grid grid-cols-5 p-2">
                 <div class="col-span-4">
                   <h1 class="text-gray-600 text-lg font-semibold">App 1</h1>
@@ -354,7 +398,7 @@
       </div>
       <div class="relative group">
            <img src="Images/app-2.jpg" alt="">
-            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-[90%] start-6 bottom-5 py-3">
+            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-75 w-[90%] start-6 bottom-5 py-3">
             <div class="grid grid-cols-5 p-2">
                 <div class="col-span-4">
                   <h1 class="text-gray-600 text-lg font-semibold">App 1</h1>
@@ -369,7 +413,7 @@
       </div>
       <div class="relative group">
            <img src="Images/product-2.jpg" alt="">
-            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-[90%] start-6 bottom-5 py-3">
+            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-75 w-[90%] start-6 bottom-5 py-3">
             <div class="grid grid-cols-5 p-2">
                 <div class="col-span-4">
                   <h1 class="text-gray-600 text-lg font-semibold">App 1</h1>
@@ -384,7 +428,7 @@
       </div>
       <div class="relative group">
            <img src="Images/branding-2.jpg" alt="">
-            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-[90%] start-6 bottom-5 py-3">
+            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-75 w-[90%] start-6 bottom-5 py-3">
             <div class="grid grid-cols-5 p-2">
                 <div class="col-span-4">
                   <h1 class="text-gray-600 text-lg font-semibold">App 1</h1>
@@ -399,7 +443,7 @@
       </div>
       <div class="relative group">
            <img src="Images/books-2.jpg" alt="">
-            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-[90%] start-6 bottom-5 py-3">
+            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-75 w-[90%] start-6 bottom-5 py-3">
             <div class="grid grid-cols-5 p-2">
                 <div class="col-span-4">
                   <h1 class="text-gray-600 text-lg font-semibold">App 1</h1>
@@ -414,7 +458,7 @@
       </div>
       <div class="relative group">
            <img src="Images/app-3.jpg" alt="">
-            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-[90%] start-6 bottom-5 py-3">
+            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-75 w-[90%] start-6 bottom-5 py-3">
             <div class="grid grid-cols-5 p-2">
                 <div class="col-span-4">
                   <h1 class="text-gray-600 text-lg font-semibold">App 1</h1>
@@ -429,7 +473,7 @@
       </div>
       <div class="relative group">
            <img src="Images/product-3.jpg" alt="">
-            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-[90%] start-6 bottom-5 py-3">
+            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-75 w-[90%] start-6 bottom-5 py-3">
             <div class="grid grid-cols-5 p-2">
                 <div class="col-span-4">
                   <h1 class="text-gray-600 text-lg font-semibold">App 1</h1>
@@ -444,7 +488,7 @@
       </div>
       <div class="relative group">
            <img src="Images/branding-3.jpg" alt="">
-            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-[90%] start-6 bottom-5 py-3">
+            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-75 w-[90%] start-6 bottom-5 py-3">
             <div class="grid grid-cols-5 p-2">
                 <div class="col-span-4">
                   <h1 class="text-gray-600 text-lg font-semibold">App 1</h1>
@@ -459,7 +503,7 @@
       </div>
       <div class="relative group">
            <img src="Images/books-3.jpg" alt="">
-            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 w-[90%] start-6 bottom-5 py-3">
+            <div class="absolute bg-white object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-75 w-[90%] start-6 bottom-5 py-3">
             <div class="grid grid-cols-5 p-2">
                 <div class="col-span-4">
                   <h1 class="text-gray-600 text-lg font-semibold">App 1</h1>
@@ -543,7 +587,7 @@
               <div><p class="text-sm text-gray-500">Stone Owner</p></div>
            </div>
         </div>
-        <div class="swiper-slide rounded-md sm:w-full">
+        <!-- <div class="swiper-slide rounded-md sm:w-full">
            <p class="bg-stone-200 p-5 pb-20 text-gray-800 italic"><i class="bi bi-quote text-2xl text-green-500"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero explicabo modi corrupti omnis at tempora voluptas quisquam? Quam, molestiae!<i class="bi bi-quote text-2xl text-green-500 transform rotate-180 quote-icon-right"></i></p>         
            <div class="w-1/4 -mt-14 ms-5 flex text-center flex-col">
               <div><img src="Images/testimonials-1.jpg" class="rounded-full border-4 border-stone-100"></div>
@@ -558,7 +602,7 @@
               <div><h3 class="text-gray-600 text-xl font-semibold">jena karlis</h3></div>
               <div><p class="text-sm text-gray-500">Stone Owner</p></div>
            </div>
-        </div>
+        </div> -->
       </div>
       <div class="mt-24">
         <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
@@ -618,7 +662,7 @@
     <div class="flex flex-col text-center" data-aos="zoom-in" data-aos-duration="1000">
         <div><h1 class="text-4xl font-semibold mb-5">Call To Action</h1></div>
         <div><p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, rerum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur sapiente ipsam doloribus quas magni placeat quaerat culpa voluptatum quibusdam.</p></div>
-        <div> <button class="p-3 px-10 rounded-3xl border-2 border-white hover:bg-green-500">Call To Action</button></div>
+        <div> <button class="p-3 px-10 rounded-3xl border-2 border-white hover:bg-green-500" onclick="window.scrollTo({top:0, behavior:'smooth'});">Call To Action</button></div>
     </div>  
     
    </div>
@@ -814,7 +858,12 @@
    </div>
    
 </div>
-<div class="!fixed bottom-5 end-5 "> <a href="#Home"><i class="bi bi-arrow-up-circle-fill text-green-500 text-4xl z-10"></i></a> </div>
+<!-- <div class="!fixed bottom-5 end-5 "> <a href="#Home"><i class="bi bi-arrow-up-circle-fill text-green-500 text-4xl z-10"></i></a> </div> -->
+
+<!-- ------------------------------------------------------bottom to top----------------------------------------- -->
+<div class="rounded-full  shadow-lg fixed bottom-5 right-5 cursor-pointer hover" onclick="window.scrollTo({top:0, behavior:'smooth'});">
+  <i class="fix bi bi-arrow-up-circle-fill text-4xl text-green-500 hover:text-green-400 duration-300 sticky"></i>
+</div>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>

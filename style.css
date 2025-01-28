@@ -25,13 +25,19 @@
     transform: rotate3d('180')
 }
 
-.swiper-pagination-bullet{
+ /* .swiper-pagination-bullet{
     outline: none;
     border: 2px solid green;
     color: white;
     padding: 5px;
-}
+} */
 
+.swiper-pagination .swiper-pagination-bullet{
+    background-color: white;
+    border: 2px solid green ;
+    padding: 5px;
+
+}
 .swiper-pagination-bullet-active {
     background-color: #10bc69 !important;
   }
